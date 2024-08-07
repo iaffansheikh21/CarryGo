@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
             >
                 <Link href={'/'}>
                     <div className="flex items-center">
-                        <Image src="/logo.svg" alt="logo" width={100} height={100} />
+                        <Image src="/logo_footer.svg" alt="logo" width={100} height={100} />
                     </div>
                 </Link>
                 <div className="hidden md:flex md:items-center space-x-8">

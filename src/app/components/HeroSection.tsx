@@ -81,7 +81,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="flex items-end md:col-span-1">
-                            <button className="bg-red-600 text-white px-6 py-2 mb-1 text-sm rounded font-semibold w-full">
+                            <button className="bg-red-600 text-white px-6 py-2 mb-1 hover:shadow-xl hover:transition hover:duration-500 ease-in-out text-sm rounded font-semibold w-full">
                                 Search
                             </button>
                         </div>
