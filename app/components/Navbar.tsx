@@ -4,7 +4,9 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faCaretDown, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { RiArrowDropDownFill } from "react-icons/ri";
+import { FaCaretLeft } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 
 const Navbar: React.FC = () => {
@@ -56,7 +58,7 @@ const Navbar: React.FC = () => {
                         onMouseLeave={handleMouseLeave}
                     >
                         <button className="text-sm flex items-center hover:text-gray-700 cursor-pointer">
-                            Home <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+                            Home <RiArrowDropDownFill />
                         </button>
                         {hoveredDropdown === 'home' && (
                             <div className="absolute top-full text-sm right-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
@@ -81,7 +83,7 @@ const Navbar: React.FC = () => {
                         onMouseLeave={handleMouseLeave}
                     >
                         <button className="text-sm flex items-center hover:text-gray-700 cursor-pointer">
-                            Listing <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+                            Listing <RiArrowDropDownFill />
                         </button>
                         {hoveredDropdown === 'listing' && (
                             <div className="absolute top-full text-sm right-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
@@ -90,8 +92,10 @@ const Navbar: React.FC = () => {
                                     onMouseEnter={() => setNestedDropdown('grid')}
                                     onMouseLeave={() => setNestedDropdown(null)}
                                 >
-                                    <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />Grid </span>
-                                    
+                                    <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            Grid
+                                        </span>
                                     {nestedDropdown === 'grid' && (
                                         <div className="absolute top-0 text-sm right-full mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
                                             <Link href="/" passHref>
@@ -114,7 +118,10 @@ const Navbar: React.FC = () => {
                                     onMouseEnter={() => setNestedDropdown('list')}
                                     onMouseLeave={() => setNestedDropdown(null)}
                                 >
-                                    <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />List</span>
+                                    <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            List
+                                        </span>
                                     {nestedDropdown === 'list' && (
                                         <div className="absolute top-0 text-sm right-full mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
                                             <Link href="/" passHref>
@@ -137,7 +144,10 @@ const Navbar: React.FC = () => {
                                     onMouseEnter={() => setNestedDropdown('masonry')}
                                     onMouseLeave={() => setNestedDropdown(null)}
                                 >
-                                    <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />Masonry</span>
+                                    <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            Masonry
+                                        </span>
                                     {nestedDropdown === 'masonry' && (
                                         <div className="absolute top-0 text-sm right-full mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
                                             <Link href="/" passHref>
@@ -154,8 +164,11 @@ const Navbar: React.FC = () => {
                                     onMouseEnter={() => setNestedDropdown('single')}
                                     onMouseLeave={() => setNestedDropdown(null)}
                                 >
-                                    <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />Single</span>
-                                    {nestedDropdown === 'single' && (
+                                    <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            Single
+                                        </span>
+                                   {nestedDropdown === 'single' && (
                                         <div className="absolute top-0 text-sm right-full mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
                                             <Link href="/" passHref>
                                                 <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">Single 1</span>
@@ -178,7 +191,7 @@ const Navbar: React.FC = () => {
                         onMouseLeave={handleMouseLeave}
                     >
                         <button className="text-sm flex items-center hover:text-gray-700 cursor-pointer">
-                            Pages <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+                            Pages <RiArrowDropDownFill />
                         </button>
                         {hoveredDropdown === 'pages' && (
                             <div className="absolute top-full right-0 mt-2 w-48 text-sm bg-white border border-gray-200 rounded shadow-lg">
@@ -191,8 +204,11 @@ const Navbar: React.FC = () => {
                                     onMouseLeave={() => setNestedDropdown(null)}
                                 >
                                     <Link href="/" passHref>
-                                        <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />Seller Detail</span>
-                                    </Link>
+                                    <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            Seller Detail
+                                        </span>
+                                        </Link>
                                     {nestedDropdown === 'sellerDetail' && (
                                         <div className="absolute top-0 right-full mt-2 w-48 text-sm bg-white border border-gray-200 rounded shadow-lg">
                                             <Link href="/" passHref>
@@ -228,7 +244,7 @@ const Navbar: React.FC = () => {
                         onMouseLeave={handleMouseLeave}
                     >
                         <button className="text-sm flex items-center hover:text-gray-700 cursor-pointer">
-                            Extras <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+                            Extras <RiArrowDropDownFill />
                         </button>
                         {hoveredDropdown === 'extras' && (
                             <div className="absolute top-full rihgt-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
@@ -238,7 +254,10 @@ const Navbar: React.FC = () => {
                                     onMouseLeave={() => setNestedDropdown(null)}
                                 >
                                     <Link href="/" passHref>
-                                        <span className="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />Grid Variants</span>
+                                        <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            Grid Variants
+                                        </span>
                                     </Link>
                                     {nestedDropdown === 'gridVariants' && (
                                         <div className="absolute top-0 right-full mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
@@ -260,7 +279,10 @@ const Navbar: React.FC = () => {
                                     onMouseLeave={() => setNestedDropdown(null)}
                                 >
                                     <Link href="/" passHref>
-                                        <span className="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />User Panel</span>
+                                        <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            User Panel
+                                        </span>
                                     </Link>
                                     {nestedDropdown === 'userPanel' && (
                                         <div className="absolute top-0 right-full mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
@@ -295,8 +317,11 @@ const Navbar: React.FC = () => {
                                     onMouseLeave={() => setNestedDropdown(null)}
                                 >
                                     <Link href="/" passHref>
-                                        <span className="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />Nested Navigation</span>
-                                    </Link>
+                                    <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            Nested Navigation
+                                        </span>
+                                        </Link>
                                     {nestedDropdown === 'nestedNavigation' && (
                                         <div className="absolute top-0 right-full mt-2 w-60 bg-white border border-gray-200 rounded shadow-lg">
                                             <Link href="/" passHref>
@@ -311,7 +336,11 @@ const Navbar: React.FC = () => {
                                                 onMouseLeave={() => setSubNestedDropdown(null)}
                                             >
                                                 <Link href="/" passHref>
-                                                    <span className="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />Level 2</span>
+                                                <span className="flex items-center py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer">
+                                            <FaCaretLeft className="mr-0 text-xs" />
+                                            Level 2
+                                        </span>
+                                                    {/* <span className="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 cursor-pointer"><FontAwesomeIcon icon={faChevronLeft} className="mr-1" />Level 2</span> */}
                                                 </Link>
                                                 {subNestedDropdown === 'level2' && (
                                                     <div className="absolute top-0 right-full mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
@@ -358,10 +387,12 @@ const Navbar: React.FC = () => {
                     <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
                 </button>
             </nav>
+            {/* Sidebar menu */}
             {isMenuOpen && (
                 <div className="fixed top-0 left-0 w-full h-full bg-white z-40 md:hidden">
                     <div className="flex flex-col items-center mt-20">
                         <Link href="/" passHref legacyBehavior>
+
                             <a className="text-lg py-2" onClick={toggleMenu}>Home</a>
                         </Link>
                         <Link href="/" passHref legacyBehavior>
@@ -371,7 +402,7 @@ const Navbar: React.FC = () => {
                             <a className="text-lg py-2" onClick={toggleMenu}>Pages</a>
                         </Link>
                         <Link href="/" passHref legacyBehavior>
-                            <a className="text-lg py-2" onClick={toggleMenu}>About</a>
+                            <a className="text-lg py-2" onClick={toggleMenu}>Extras</a>
                         </Link>
                         <Link href="/" passHref legacyBehavior>
                             <a className="text-lg py-2" onClick={toggleMenu}>Contact</a>
