@@ -140,7 +140,7 @@ import { SlCalender } from "react-icons/sl";
 const FeaturedAds = () => {
     const cardData = [
         {
-            imageUrl: "http://themestarz.net/html/craigs/assets/img/image-01.jpg",
+            imageUrl: "https://images.pexels.com/photos/1632035/pexels-photo-1632035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             title: "Furniture for sale",
             location: "Manhattan, NY",
             price: "80",
@@ -154,7 +154,7 @@ const FeaturedAds = () => {
             detailLink: "/",
         },
         {
-            imageUrl: "http://themestarz.net/html/craigs/assets/img/image-20.jpg",
+            imageUrl: "https://images.pexels.com/photos/1632035/pexels-photo-1632035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             offerLabel: "OFFER",
             categoryLabel: "EDUCATION",
             title: "Creative Course",
@@ -168,7 +168,7 @@ const FeaturedAds = () => {
             detailLink: "/",
         },
         {
-            imageUrl: "http://themestarz.net/html/craigs/assets/img/image-21.jpg",
+            imageUrl: "https://images.pexels.com/photos/1632035/pexels-photo-1632035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             offerLabel: "AD",
             categoryLabel: "ADVENTURE",
             title: "Into The Wild",
