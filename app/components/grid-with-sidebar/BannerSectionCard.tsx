@@ -31,6 +31,11 @@ const BannerSectionCard = () => {
             <FaSearch className="w-10 h-10 text-white bg-[#FF0000] p-2 rounded-sm  hover:shadow-2xl cursor-pointer transition-shadow duration-200" />
           </div>
         </div>
+        <div className=" flex justify-start items-center mt-10">
+          <h1 className="text-4xl text-black text-bold font-sans">
+            Listing Grid With Sidebar
+          </h1>
+        </div>
       </div>
     </>
   );

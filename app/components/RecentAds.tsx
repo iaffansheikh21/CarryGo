@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 
-const CardComponent = () => {
+const RecentAds = () => {
     const cardData = [
         {
             imageUrl: "http://themestarz.net/html/craigs/assets/img/image-01.jpg",
@@ -128,110 +128,16 @@ const CardComponent = () => {
                 "Nam eget imperdiet massa. Cras dolor nulla, tristique eu nisl ut, venenatis volutpat massa. Integer imperdiet finibus ipsum vitae",
             detailLink: "/",
         },
-        {
-            imageUrl:
-                "https://images.pexels.com/photos/414781/pexels-photo-414781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            offerLabel: "OFFER",
-            categoryLabel: "CAMERAS",
-            title: "Retro Camera",
-            location: "Bethany, WV",
-            price: "120",
-            date: "20.12.2016",
-            userName: "Paula",
-            featured: false,
-
-            description:
-                "Nam eget imperdiet massa. Cras dolor nulla, tristique eu nisl ut, venenatis volutpat massa. Integer imperdiet finibus ipsum vitae",
-            detailLink: "/",
-        },
-        {
-            imageUrl:
-                "https://images.pexels.com/photos/369264/pexels-photo-369264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            offerLabel: "OFFER",
-            categoryLabel: "SPORT",
-            title: "Urban Bike",
-            location: "Freeport, TX",
-            price: "140",
-            date: "6.11.2016",
-            userName: "Laura",
-            featured: false,
-
-            description:
-                "Nam eget imperdiet massa. Cras dolor nulla, tristique eu nisl ut, venenatis volutpat massa. Integer imperdiet finibus ipsum vitae",
-            detailLink: "/",
-        },
-        {
-            imageUrl:
-                "https://images.pexels.com/photos/369264/pexels-photo-369264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            offerLabel: "OFFER",
-            categoryLabel: "SPORT",
-            title: "Urban Bike",
-            location: "Freeport, TX",
-            price: "140",
-            date: "6.11.2016",
-            userName: "Laura",
-            featured: false,
-
-            description:
-                "Nam eget imperdiet massa. Cras dolor nulla, tristique eu nisl ut, venenatis volutpat massa. Integer imperdiet finibus ipsum vitae",
-            detailLink: "/",
-        },
-        {
-            imageUrl:
-                "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            offerLabel: "OFFER",
-            categoryLabel: "Mobiles",
-            title: "Used Smartphone",
-            location: "West Roxbury, MA",
-            price: "300",
-            date: "28.02.2017",
-            userName: "Detroit Pet",
-            featured: false,
-
-            description:
-                "Vestibulum congue at justo semper dignissim. Pellentesque ullamcorper justo quis bibendum consequat.",
-            detailLink: "/",
-        },
-        // Add more card data as needed
     ];
 
     return (
         <>
-            {/* Bottom Elliptical Background */}
-            <div
-                className="h-32 bg-[#F2F2F2]"
-                style={{
-                    clipPath: 'ellipse(90% 100% at 50% 100%)'
-                }}
-            ></div>
             <div className="flex flex-col justify-center items-center space-y-6 bg-[#F2F2F2] ">
                 {/* Heading and Dropdowns */}
                 <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between p-4 rounded-lg space-y-4 md:space-y-0">
-                    <h1 className="text-3xl font-sans text-center md:text-left mb-4 md:mb-0">
-                        Recent Listings
+                    <h1 className="text-3xl font-sans text-center md:text-left mb-4 md:mb-0 mt-4">
+                        Recent Ads
                     </h1>
-                    <div className="flex flex-col md:flex-row justify-center md:justify-end space-y-4 md:space-y-0 md:space-x-4">
-                        <select className="px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500">
-                            <option value="">Category</option>
-                            <option value="Home">Home & Decor</option>
-                            <option value="Education">Education</option>
-                            <option value="Adventure">Adventure</option>
-                            <option value="RealEstate">Real Estate</option>
-                            <option value="Architecture">Architecture</option>
-                            <option value="Jobs">Jobs</option>
-                            <option value="Mobiles">Mobiles</option>
-                            <option value="Cars">Cars</option>
-                            <option value="Cameras">Cameras</option>
-                            <option value="Sport">Sport</option>
-                        </select>
-                        <select className="px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500">
-                            <option value="">Default Sorting</option>
-                            <option value="PriceLowHigh">Price: Low to High</option>
-                            <option value="PriceHighLow">Price: High to Low</option>
-                            <option value="Newest">Newest Listings</option>
-                            <option value="Oldest">Oldest Listings</option>
-                        </select>
-                    </div>
                 </div>
 
 
@@ -306,9 +212,62 @@ const CardComponent = () => {
                         </div>
                     ))}
                 </div>
+                {/* Add the new UI at the end */}
+
+                <div className="flex flex-col items-center mt-8 px-4 w-full">
+                    <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-md "
+                        style={{
+                            backgroundImage: 'url(/image-08.jpg)',
+                            backgroundBlendMode: 'overlay',
+                            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+
+                        }}
+                    >
+                        <h2 className="text-left text-2xl font-sans text-white mb-4">
+                            Get the Latest Ads in Your Inbox
+                        </h2>
+                        <div className="flex flex-col md:flex-row md:space-x-4 items-center">
+                            <div className="flex-1 mb-4 md:mb-0 md:flex md:items-center">
+                                <label className="block md:mr-2 text-white font-semibold">Category?</label>
+                                <select className="w-full px-4 py-2 mt-2 md:mt-0 border rounded-md">
+                                    <option>Select Category</option>
+                                    <option>Home & Decor</option>
+                                    <option>Education</option>
+                                    <option>Adventure</option>
+                                    <option>Real Estate</option>
+                                    <option>Architecture</option>
+                                    <option>Jobs</option>
+                                    <option>Mobiles</option>
+                                    <option>Cars</option>
+                                    <option>Cameras</option>
+                                    <option>Sport</option>
+                                </select>
+                            </div>
+                            <div className="flex-1 mb-4 md:mb-0 md:flex md:items-center">
+                                <label className="block text-white font-semibold md:mr-2">Email</label>
+                                <input
+                                    type="email"
+                                    className="w-full px-4 py-2 mt-2 md:mt-0 border rounded-md"
+                                    placeholder="Your Email"
+                                />
+                            </div>
+                            <button className="px-4 py-2 mt-2 md:mt-0 bg-red-500 text-white rounded-md">
+                                &gt;
+                            </button>
+                        </div>
+                    </div>
+                    <div className="mt-8 flex flex-wrap justify-center space-x-14 mb-8">
+                        <Link href={"/"}><img src="/partner-1.png" alt="Logo 1" className="h-12 mx-2 my-2" /></Link>
+                        <Link href={"/"}><img src="/partner-2.png" alt="Logo 2" className="h-12 mx-2 my-2" /></Link>
+                        <Link href={"/"}><img src="/partner-3.png" alt="Logo 3" className="h-12 mx-2 my-2" /></Link>
+                        <Link href={"/"}><img src="/partner-4.png" alt="Logo 4" className="h-12 mx-2 my-2" /></Link>
+                        <Link href={"/"}><img src="/partner-5.png" alt="Logo 5" className="h-12 mx-2 my-2" /></Link>
+                    </div>
+                </div>
+
             </div>
         </>
     );
 };
 
-export default CardComponent;
+export default RecentAds;

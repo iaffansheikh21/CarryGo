@@ -6,6 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import { SlCalender } from "react-icons/sl";
 import SortByDropDown from "./SortByDropDown";
+import SideSection from "./SideSection";
 
 const CardComponent = () => {
   const cardData = [
@@ -304,146 +305,151 @@ const CardComponent = () => {
   const handleLayoutToggle = () => {
     setLayout(layout === "vertical" ? "horizontal" : "vertical");
   };
-
   return (
     <>
-      <div
-        className={`flex flex-col items-center ${
-          layout === "horizontal" ? "space-y-0" : "space-y-2"
-        }`}
-      >
-        <div className="flex justify-between items-start mb-6 w-[65%] z-50">
-          <div className="hidden lg:block">
-            <SortByDropDown />
-          </div>
-          <div className="hidden lg:block">
-            <button onClick={handleLayoutToggle} className="text-lg">
-              {layout === "vertical" ? <FaListUl /> : <FaThLarge />}
-            </button>
-          </div>
-        </div>
+      <div className="flex flex-col lg:flex-row items-center lg:items-start lg:mx-24">
         <div
-          className={`grid ${
-            layout === "vertical"
-              ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-[65%] h-full overflow-hidden"
-              : "grid-cols-1 gap-2 w-[65%]"
-          }`}
+          className={`flex flex-col items-center ${
+            layout === "horizontal" ? "space-y-0" : "space-y-2"
+          } `}
         >
-          {paginatedData.map((card, index) => (
-            <div
-              key={index}
-              className={`bg-[#F8F8F8] transition-transform transform hover:-translate-y-2 hover:shadow-2xl rounded-lg mx-auto ${
-                layout === "vertical"
-                  ? "mt-2"
-                  : "flex w-full flex-col md:flex-row"
-              }`}
-            >
-              <div className="m-2 overflow-hidden">
-                <div className="relative">
-                  <img
-                    src={card.imageUrl}
-                    alt="Card Image"
-                    className={`object-cover ${
-                      layout === "vertical"
-                        ? "w-full h-64"
-                        : "w-full md:w-52 h-52 md:h-full"
-                    }`}
-                  />
-                  {card.offerLabel && (
-                    <div className="absolute top-0 left-0 bg-white bg-opacity-75 text-[#524F4E] px-2 py-1 text-sm m-1 mt-1 rounded-md">
-                      {card.offerLabel}
-                    </div>
-                  )}
-                  {card.featured && (
-                    <div className="absolute top-0 right-0 bg-red-500 text-white text-xs px-2 py-1 cursor-pointer">
-                      FEATURED
-                    </div>
-                  )}
-                  {card.categoryLabel && (
-                    <div className="absolute top-1/2 left-3 mt-3 transform -translate-y-1/2 bg-black font-bold text-white cursor-pointer text-xs px-2 py-1 hover:bg-red-700">
-                      {card.categoryLabel}
-                    </div>
-                  )}
-                  {layout === "vertical" && (
-                    <>
-                      <div className="absolute top-36 left-3 mt-2 text-lg font-semibold whitespace-nowrap hover:underline text-white cursor-pointer">
-                        {card.title}
+          <div className="flex justify-between items-start mb-6 w-full lg:w-[86%] lg:ml-20 z-50">
+            <div className="hidden lg:block">
+              <SortByDropDown />
+            </div>
+            <div className="hidden lg:mt-10 lg:block">
+              <button onClick={handleLayoutToggle} className="text-lg">
+                {layout === "vertical" ? <FaListUl /> : <FaThLarge />}
+              </button>
+            </div>
+          </div>
+
+          <div
+            className={`grid ${
+              layout === "vertical"
+                ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full lg:w-[86%] lg:ml-20 h-full overflow-hidden"
+                : "grid-cols-1 gap-7 w-[89%] lg:ml-20"
+            }`}
+          >
+            {paginatedData.map((card, index) => (
+              <div
+                key={index}
+                className={`bg-[#F8F8F8] transition-transform transform hover:-translate-y-2 hover:shadow-2xl rounded-lg mx-auto ${
+                  layout === "vertical"
+                    ? "mt-2"
+                    : "flex w-full flex-col md:flex-row"
+                }`}
+              >
+                <div className="m-2 overflow-hidden">
+                  <div className="relative">
+                    <img
+                      src={card.imageUrl}
+                      alt="Card Image"
+                      className={`object-cover ${
+                        layout === "vertical"
+                          ? "w-full h-64"
+                          : "w-full md:w-52 h-52 md:h-full"
+                      }`}
+                    />
+                    {card.offerLabel && (
+                      <div className="absolute top-0 left-0 bg-white bg-opacity-75 text-[#524F4E] px-2 py-1 text-sm m-1 mt-1 rounded-md">
+                        {card.offerLabel}
                       </div>
-                      <div className="absolute top-44 pt-1 left-3 flex items-center text-md font-sans font-bold text-[#878689]">
-                        <FaMapMarkerAlt className="mr-1" />
-                        <span className="hover:underline cursor-pointer">
-                          {card.location}
-                        </span>
+                    )}
+                    {card.featured && (
+                      <div className="absolute top-0 right-0 bg-red-500 text-white text-xs px-2 py-1 cursor-pointer">
+                        FEATURED
                       </div>
-                      <div className="absolute top-56 left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
+                    )}
+                    {card.categoryLabel && (
+                      <div className="absolute top-1/2 left-3 mt-3 transform -translate-y-1/2 bg-black font-bold text-white cursor-pointer text-xs px-2 py-1 hover:bg-red-700">
+                        {card.categoryLabel}
+                      </div>
+                    )}
+                    {layout === "vertical" && (
+                      <>
+                        <div className="absolute top-36 left-3 mt-2 text-lg font-semibold whitespace-nowrap hover:underline text-white cursor-pointer">
+                          {card.title}
+                        </div>
+                        <div className="absolute top-44 pt-1 left-3 flex items-center text-md font-sans font-bold text-[#878689]">
+                          <FaMapMarkerAlt className="mr-1" />
+                          <span className="hover:underline cursor-pointer">
+                            {card.location}
+                          </span>
+                        </div>
+                        <div className="absolute top-56 left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
+                          <div className="pt-1 text-md font-bold text-gray-900">
+                            ${card.price}
+                          </div>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+                {layout === "horizontal" && (
+                  <div className="flex flex-col justify-between w-full p-2">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+                      <div className="flex-1">
+                        <div className="text-lg font-semibold text-black">
+                          {card.title}
+                        </div>
+                        <div className="text-sm text-gray-900 pl-3">
+                          {card.description}
+                        </div>
+                        <div className="flex items-center text-md hover:underline text-[#878689] mt-1">
+                          <FaMapMarkerAlt className="mr-1" />
+                          <span>{card.location}</span>
+                        </div>
+                      </div>
+                      <div className="md:absolute md:top-28 md:left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
                         <div className="pt-1 text-md font-bold text-gray-900">
                           ${card.price}
                         </div>
                       </div>
-                    </>
-                  )}
-                </div>
+                      <div className="text-md flex flex-col text-[#878689]">
+                        <div className="flex items-center mb-2">
+                          <FaUserAlt className="mr-1 hover:text-red-500" />
+                          {card.userName}
+                        </div>
+                        <div className="flex items-center text-sm text-[#878689]">
+                          <SlCalender className="mr-1" />
+                          {card.date}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center mt-2">
+                      <div className="flex items-center text-sm text-gray-500"></div>
+                      <div className="flex items-center text-sm text-gray-500 p-2">
+                        <Link href={card.detailLink}>
+                          <button className="text-sm border p-2 rounded-md border-[#FF0000] text-[#FF0000] cursor-pointer mt-2 hover:bg-[#FF0000] hover:text-white">
+                            DETAIL
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {layout === "vertical" && (
+                  <div className="bg-white rounded-b-lg pt-2 h-36 flex flex-col justify-between">
+                    <p className="text-gray-600 text-sm pl-3 pr-2">
+                      {card.description}
+                    </p>
+                    <Link href={card.detailLink}>
+                      <button className="pl-3 pt-1 pb-12 text-sm text-[#FF0000] font-bold underline cursor-pointer">
+                        DETAIL
+                      </button>
+                    </Link>
+                  </div>
+                )}
               </div>
-              {layout === "horizontal" && (
-                <div className="flex flex-col justify-between w-full p-2">
-                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-                    <div className="flex-1">
-                      <div className="text-lg font-semibold text-black">
-                        {card.title}
-                      </div>
-                      <div className="text-sm text-gray-900 pl-3">
-                        {card.description}
-                      </div>
-                      <div className="flex items-center text-md hover:underline text-[#878689] mt-1">
-                        <FaMapMarkerAlt className="mr-1" />
-                        <span>{card.location}</span>
-                      </div>
-                    </div>
-                    <div className="md:absolute md:top-28 md:left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
-                      <div className="pt-1 text-md font-bold text-gray-900">
-                        ${card.price}
-                      </div>
-                    </div>
-                    <div className="text-md flex flex-col text-[#878689]">
-                      <div className="flex items-center mb-2">
-                        <FaUserAlt className="mr-1 hover:text-red-500" />
-                        {card.userName}
-                      </div>
-                      <div className="flex items-center text-sm text-[#878689]">
-                        <SlCalender className="mr-1" />
-                        {card.date}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center mt-2">
-                    <div className="flex items-center text-sm text-gray-500"></div>
-                    <div className="flex items-center text-sm text-gray-500 p-2">
-                      <Link href={card.detailLink}>
-                        <button className="text-sm border p-2 rounded-md border-[#FF0000] text-[#FF0000] cursor-pointer mt-2 hover:bg-[#FF0000] hover:text-white">
-                          DETAIL
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-              {layout === "vertical" && (
-                <div className="bg-white rounded-b-lg pt-2 h-36 flex flex-col justify-between">
-                  <p className="text-gray-600 text-sm pl-3 pr-2">
-                    {card.description}
-                  </p>
-                  <Link href={card.detailLink}>
-                    <button className="pl-3 pt-1 pb-12 text-sm text-[#FF0000] font-bold underline cursor-pointer">
-                      DETAIL
-                    </button>
-                  </Link>
-                </div>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+        <div className="w-full lg:w-[50%] mt-8 lg:mt-28 lg:mr-64 mx-10 pr-5  pl-5 ">
+          <SideSection />
         </div>
       </div>
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center mt-6 w-full lg:w-11/12 lg:mx-auto">
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}
@@ -455,7 +461,7 @@ const CardComponent = () => {
           <button
             key={index}
             onClick={() => setCurrentPage(index + 1)}
-            className={`mx-2 px-5 py-2  rounded-md ${
+            className={`mx-2 px-5 py-2 rounded-md ${
               currentPage === index + 1 ? "text-white bg-[#FF0000]" : ""
             }`}
           >
