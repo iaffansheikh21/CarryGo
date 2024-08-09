@@ -644,7 +644,7 @@ const Navbar = () => {
                     Home 3
                   </span>
                 </Link>
-                <Link href="/" passHref>
+                <Link href="home4" passHref>
                   <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer" onClick={() => setActiveDropdown(null)}>
                     Home 4
                   </span>
