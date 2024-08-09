@@ -11,6 +11,12 @@ export default function Home() {
     <div>
       <Navbar />
       <HeroSection />
+      <div
+                className="h-32 bg-[#F2F2F2]"
+                style={{
+                    clipPath: 'ellipse(90% 100% at 50% 100%)'
+                }}
+            ></div>
       <FeaturedAds />
       <SellingSteps/>
       <RecentAds/>

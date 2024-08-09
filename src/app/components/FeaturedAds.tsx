@@ -185,12 +185,6 @@ const FeaturedAds = () => {
 
     return (
         <>
-            <div
-                className="h-32 bg-[#F2F2F2]"
-                style={{
-                    clipPath: 'ellipse(90% 100% at 50% 100%)'
-                }}
-            ></div>
             <div className="px-4 py-8 bg-[#F2F2F2]">
                 <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between p-4 rounded-lg space-y-4 md:space-y-0">
                     <h1 className="text-3xl font-sans text-center md:text-left mb-4 md:mb-0">Featured Ads</h1>

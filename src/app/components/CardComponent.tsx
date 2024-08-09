@@ -197,13 +197,6 @@ const CardComponent = () => {
 
     return (
         <>
-            {/* Bottom Elliptical Background */}
-            <div
-                className="h-32 bg-[#F2F2F2]"
-                style={{
-                    clipPath: 'ellipse(90% 100% at 50% 100%)'
-                }}
-            ></div>
             <div className="flex flex-col justify-center items-center space-y-6 bg-[#F2F2F2] ">
                 {/* Heading and Dropdowns */}
                 <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between p-4 rounded-lg space-y-4 md:space-y-0">
