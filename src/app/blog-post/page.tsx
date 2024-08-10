@@ -1,5 +1,5 @@
 import React from 'react'
-import Blog from '../components/Blogs/Blog'
+import BlogPost from '../components/Blogs/BlogPost'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import BannerSection from '../components/Blogs/BannerSection'
@@ -14,7 +14,7 @@ export default function page() {
                     clipPath: 'ellipse(90% 100% at 50% 100%)'
                 }}
                 ></div>
-      <Blog/>
+      <BlogPost/>
       <div
         className=" h-48 bg-[#F2F2F2]"
         style={{ clipPath: "ellipse(70% 50% at 50% 0%)", zIndex: 10 }}

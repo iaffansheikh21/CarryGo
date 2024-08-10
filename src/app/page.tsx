@@ -9,19 +9,12 @@ export default function Home() {
     <div>
       <Navbar />
       <HeroSection />
-      {/* Bottom Elliptical Background */}
-      <div
-        className="h-32 bg-[#F2F2F2]"
-        style={{
-          clipPath: 'ellipse(90% 100% at 50% 100%)'
-        }}
-      ></div>
       <CardComponent />
       <div
         className=" h-48 bg-[#F2F2F2]"
         style={{ clipPath: "ellipse(70% 50% at 50% 0%)", zIndex: 10 }}
       ></div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

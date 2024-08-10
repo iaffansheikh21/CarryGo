@@ -7,7 +7,7 @@ const Footer = () => {
       className="bg-white py-10 flex flex-col items-center justify-center bg-cover bg-center lg:mr-0 mr-20"
       style={{ backgroundImage: "url(/footerbg.jpg)" }}
     >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-20 gap-5 ">
+      <div className="container lg:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-20 gap-5 ">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
             src="/logo_footer.svg"

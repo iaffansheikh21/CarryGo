@@ -50,7 +50,7 @@ const RecentAds = () => {
             detailLink: "/",
         },
         {
-            imageUrl: "http://themestarz.net/html/craigs/assets/img/image-22.jpg",
+            imageUrl: "https://images.pexels.com/photos/1632035/pexels-photo-1632035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             offerLabel: "OFFER",
             categoryLabel: "REALESTATE",
             title: "Luxury Apartment",

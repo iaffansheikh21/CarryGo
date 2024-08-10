@@ -6,11 +6,6 @@ import { FaUser } from 'react-icons/fa';
 const Blog = () => {
     return (
         <>
-            <div className="w-full bg-[#F2F2F2] flex flex-col md:flex-row md:items-center md:justify-between p-4 rounded-lg space-y-4 md:space-y-0">
-                <h1 className="text-3xl ml-5 font-sans text-center md:text-left mb-4 md:mb-0 mt-4">
-                    Blog
-                </h1>
-            </div>
             <div className="flex flex-col lg:flex-row justify-center min-h-screen bg-[#F2F2F2] p-4 lg:p-8">
 
                 {/* Main Content */}
