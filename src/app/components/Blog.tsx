@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { SlCalender } from "react-icons/sl";
+import { FaUser } from 'react-icons/fa';
 
 const Blog = () => {
     return (
@@ -25,13 +27,25 @@ const Blog = () => {
                             <div className="p-4">
                                 <h1 className="text-2xl font-normal mb-2">10 tips for renovation</h1>
                                 <div className="flex space-x-2 mb-2">
-                                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded">Blog & DECOR</span>
-                                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded">DESIGN</span>
+                                    <Link href={"#"}>
+                                        <span className="bg-white hover:text-red-500 border text-gray-700 text-sm px-2 py-1 rounded">Blog & Decor</span>
+                                    </Link>
+                                    <Link href={"#"}>
+                                        <span className="bg-white hover:text-red-500 border text-gray-700 text-sm px-2 py-1 rounded">Design</span>
+
+                                    </Link>
                                 </div>
-                                <div className="flex items-center text-gray-600 text-sm mb-4">
-                                    <span className="mr-2">John Doe</span>
-                                    <span>02.05.2017</span>
+                                <div className="flex items-center text-gray-600 text-xs font-bold mb-4 mt-4">
+                                    <Link href={"#"}>
+                                    <span className="flex items-center mr-2 hover:text-red-500">
+                                        <FaUser className="mr-1" /> John Doe
+                                    </span>
+                                    </Link>
+                                    <span className="flex items-center">
+                                        <SlCalender className="mr-1" /> 02.05.2017
+                                    </span>
                                 </div>
+
                                 <p className="text-gray-500">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec tincidunt arcu, sit amet fermentum sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum tincidunt, sapien sagittis sollicitudin dapibus, risus mi euismod elit
                                 </p>
@@ -54,12 +68,23 @@ const Blog = () => {
                             <div className="p-4">
                                 <h1 className="text-2xl font-normal mb-2">8 Things to Remember Every Morning</h1>
                                 <div className="flex space-x-2 mb-2">
-                                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded">Blog & DECOR</span>
-                                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded">DESIGN</span>
+                                    <Link href={"#"}>
+                                        <span className="bg-white hover:text-red-500 border text-gray-700 text-sm px-2 py-1 rounded">Blog & Decor</span>
+                                    </Link>
+                                    <Link href={"#"}>
+                                        <span className="bg-white hover:text-red-500 border text-gray-700 text-sm px-2 py-1 rounded">Design</span>
+
+                                    </Link>
                                 </div>
-                                <div className="flex items-center text-gray-600 text-sm mb-4">
-                                    <span className="mr-2">John Doe</span>
-                                    <span>02.05.2021</span>
+                                <div className="flex items-center text-gray-600 text-xs font-bold mb-4 mt-4">
+                                    <Link href={"#"}>
+                                    <span className="flex items-center mr-2 hover:text-red-500">
+                                        <FaUser className="mr-1" /> John Doe
+                                    </span>
+                                    </Link>
+                                    <span className="flex items-center">
+                                        <SlCalender className="mr-1" /> 02.05.2017
+                                    </span>
                                 </div>
                                 <p className="text-gray-500">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec tincidunt arcu, sit amet fermentum sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum tincidunt, sapien sagittis sollicitudin dapibus, risus mi euismod elit
@@ -83,12 +108,23 @@ const Blog = () => {
                             <div className="p-4">
                                 <h1 className="text-2xl font-normal mb-2">Professional kitchen at your home</h1>
                                 <div className="flex space-x-2 mb-2">
-                                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded">Blog & DECOR</span>
-                                    <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded">DESIGN</span>
+                                    <Link href={"#"}>
+                                        <span className="bg-white hover:text-red-500 border text-gray-700 text-sm px-2 py-1 rounded">Blog & Decor</span>
+                                    </Link>
+                                    <Link href={"#"}>
+                                        <span className="bg-white hover:text-red-500 border text-gray-700 text-sm px-2 py-1 rounded">Design</span>
+
+                                    </Link>
                                 </div>
-                                <div className="flex items-center text-gray-600 text-sm mb-4">
-                                    <span className="mr-2">John Doe</span>
-                                    <span>02.05.2017</span>
+                                <div className="flex items-center text-gray-600 text-xs font-bold mb-4 mt-4">
+                                    <Link href={"#"}>
+                                    <span className="flex items-center mr-2 hover:text-red-500">
+                                        <FaUser className="mr-1" /> John Doe
+                                    </span>
+                                    </Link>
+                                    <span className="flex items-center">
+                                        <SlCalender className="mr-1" /> 02.05.2017
+                                    </span>
                                 </div>
                                 <p className="text-gray-500">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec tincidunt arcu, sit amet fermentum sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum tincidunt, sapien sagittis sollicitudin dapibus, risus mi euismod elit.
@@ -108,19 +144,19 @@ const Blog = () => {
                             &lt;
                         </button>
                         <Link href={"#"}>
-                        <button className={`mx-2 px-5 py-2 rounded-md bg-red-500 text-white hover:bg-white hover:text-black bg-opacity-80 hover:transition hover:duration-600`}>
-                            1
-                        </button>
+                            <button className={`mx-2 px-5 py-2 rounded-md bg-red-500 text-white hover:bg-white hover:text-black bg-opacity-80 hover:transition hover:duration-600`}>
+                                1
+                            </button>
                         </Link>
                         <Link href={"#"}>
-                        <button className={`mx-2 px-5 py-2 rounded-md bg-red-500 text-white hover:bg-white hover:text-black bg-opacity-80 hover:transition hover:duration-600`}>
-                            2
-                        </button>
+                            <button className={`mx-2 px-5 py-2 rounded-md bg-red-500 text-white hover:bg-white hover:text-black bg-opacity-80 hover:transition hover:duration-600`}>
+                                2
+                            </button>
                         </Link>
                         <Link href={"#"}>
-                        <button className={`mx-2 px-5 py-2 rounded-md bg-red-500 text-white hover:bg-white hover:text-black bg-opacity-80 hover:transition hover:duration-600`}>
-                            3
-                        </button>
+                            <button className={`mx-2 px-5 py-2 rounded-md bg-red-500 text-white hover:bg-white hover:text-black bg-opacity-80 hover:transition hover:duration-600`}>
+                                3
+                            </button>
                         </Link>
                         <button className="px-3 py-2 bg-[#F2F2F2] rounded-r hover:bg-white">
                             &gt;
