@@ -306,12 +306,12 @@ const Navbar = () => {
                     </div>
                   )}
                 </div>
-                <Link href="/" passHref>
+                <Link href="/blog" passHref>
                   <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
                     Blog
                   </span>
                 </Link>
-                <Link href="/" passHref>
+                <Link href="/blog-post" passHref>
                   <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
                     Blog Post
                   </span>
