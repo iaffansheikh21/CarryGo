@@ -191,6 +191,7 @@
 import { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 
 export default function Home() {
@@ -412,10 +413,10 @@ export default function Home() {
                                                 type="text"
                                                 id="where"
                                                 placeholder="Enter Location"
-                                                className="w-full border border-gray-300 text-md p-2 rounded pl-10"
+                                                className="w-full border border-gray-300 text-md p-2 rounded"
                                             />
-                                            <div className="absolute top-0 left-0 flex items-center justify-center h-full w-10 text-red-600">
-                                                📍
+                                            <div className="absolute top-0 right-0 flex items-center justify-center h-full w-10 text-black">
+                                                <FaMapMarkerAlt/>
                                             </div>
                                         </div>
                                     </div>
@@ -444,10 +445,10 @@ export default function Home() {
 
                             <div className="flex items-center justify-start mb-4">
                                 <button
-                                    className="text-red-600 font-semibold flex items-center justify-center"
+                                    className="text-red-500 hover:text-red-700 font-semibold flex items-center justify-center "
                                     onClick={() => setShowMoreOptions(!showMoreOptions)}
                                 >
-                                    <span className="text-xl mr-2">+</span> More Options
+                                    <span className="text-xl mr-2 text-red-600 mb-1">+</span> More Options
                                 </button>
                             </div>
 
