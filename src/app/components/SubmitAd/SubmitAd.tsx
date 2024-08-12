@@ -34,7 +34,9 @@ const AdForm: React.FC = () => {
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
         onDrop: onDropGallery,
-        accept: 'image/*'
+        accept: {
+            'image/*': []
+        }
     });
 
     const removeGalleryFile = (file: File) => {
