@@ -316,7 +316,7 @@ const Navbar = () => {
                     Blog Post
                   </span>
                 </Link>
-                <Link href="/" passHref>
+                <Link href="/submit-ad" passHref>
                   <span className="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
                     Submit Ad
                   </span>

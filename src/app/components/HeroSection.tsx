@@ -267,7 +267,7 @@ export default function Home() {
                                             className="w-full border border-gray-300 text-md p-2 rounded pl-10"
                                         />
                                         <div className="absolute top-0 left-0 flex items-center justify-center h-full w-10 text-red-600">
-                                            📍
+                                        <FaMapMarkerAlt />
                                         </div>
                                     </div>
                                 </div>
