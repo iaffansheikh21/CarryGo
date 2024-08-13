@@ -93,7 +93,7 @@ const Navbar = () => {
               className="text-sm flex items-center hover:text-gray-700 cursor-pointer"
               onClick={() => handleDropdownClick("home")}
             >
-              Home <RiArrowDropDownFill />
+              Home  <RiArrowDropDownFill />
             </button>
             {activeDropdown === "home" && (
               <div className="absolute top-full text-sm right-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
@@ -520,44 +520,32 @@ const Navbar = () => {
           </div>
         </div>
         <button onClick={toggleMenu} className="md:hidden text-xl">
-          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+        <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
         </button>
       </nav>
-      {/* Mobile Menu */}
+
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white z-40 md:hidden">
-          <div className="flex flex-col items-center mt-20">
-            <Link href="/" passHref legacyBehavior>
-              <a className="text-lg py-2" onClick={toggleMenu}>
-                Home
-              </a>
-            </Link>
-            <Link href="/" passHref legacyBehavior>
-              <a className="text-lg py-2" onClick={toggleMenu}>
-                Listing
-              </a>
-            </Link>
-            <Link href="/" passHref legacyBehavior>
-              <a className="text-lg py-2" onClick={toggleMenu}>
-                Pages
-              </a>
-            </Link>
-            <Link href="/" passHref legacyBehavior>
-              <a className="text-lg py-2" onClick={toggleMenu}>
-                Extras
-              </a>
-            </Link>
-            <Link href="/" passHref legacyBehavior>
-              <a className="text-lg py-2" onClick={toggleMenu}>
-                Contact
-              </a>
-            </Link>
-            <Link href="/" passHref>
-              <button className="bg-white text-xs text-red-600 border border-red-600 hover:bg-red-600 hover:text-white transition duration-700 ease-in-out py-2 px-4 rounded-full">
-                SUBMIT AD
-              </button>
-            </Link>
-          </div>
+        <div className="md:hidden flex flex-col space-y-4 mt-4 bg-white p-4 shadow-md">
+          <Link href="/" passHref>
+            <span className="block text-gray-700 hover:text-gray-900 cursor-pointer">Home</span>
+          </Link>
+          <Link href="/listing" passHref>
+            <span className="block text-gray-700 hover:text-gray-900 cursor-pointer">Listing</span>
+          </Link>
+          <Link href="/pages" passHref>
+            <span className="block text-gray-700 hover:text-gray-900 cursor-pointer">Pages</span>
+          </Link>
+          <Link href="/extras" passHref>
+            <span className="block text-gray-700 hover:text-gray-900 cursor-pointer">Extras</span>
+          </Link>
+          <Link href="/contact" passHref>
+            <span className="block text-gray-700 hover:text-gray-900 cursor-pointer">Contact</span>
+          </Link>
+          <Link href="/" passHref>
+            <button className="bg-white text-xs text-red-600 border border-red-600 hover:bg-red-600 hover:text-white transition duration-700 ease-in-out py-2 px-4 rounded-full">
+              SUBMIT AD
+            </button>
+          </Link>
         </div>
       )}
     </div>
