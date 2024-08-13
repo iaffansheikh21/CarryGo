@@ -110,7 +110,7 @@ const Register: React.FC = () => {
               name="repeatPassword"
               type="repeatPassword"
               value={repeatPassword}
-              onChange={(e) => setrepeatPassword(e.target.value)}
+              onChange={(e) => setRepeatPassword(e.target.value)}
               required
               className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
             />
@@ -143,7 +143,7 @@ const Register: React.FC = () => {
 
       <div className="mt-0 text-xs text-center text-gray-600">
         <p>
-          By clicking "Register" button, you agree with our 
+          By clicking &quot;Register&quot; button, you agree with our 
           <Link href="#" legacyBehavior>
             <a className="font-medium text-red-400 hover:text-red-600"> Terms & Conditions</a>
           </Link>
