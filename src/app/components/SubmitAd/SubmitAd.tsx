@@ -44,10 +44,10 @@ const AdForm: React.FC = () => {
     };
 
     return (
-        <div className="w-full mt-6 mx-auto p-6 bg-[#F2F2F2]">
+        <div className="w-full mx-auto p-6 bg-[#F2F2F2]">
             <div className="bg-yellow-50 p-4 rounded mb-6 mt-6">
                 <p>You don&apos;t have an account!</p>
-                <p className="text-sm">You can submit only 1 ad at a time. To submit more, you need to <a href="sing-in" className="text-red-500">Sign in</a> or <a href="register" className="text-red-500">Register</a></p>
+                <p className="text-sm">You can submit only 1 ad at a time. To submit more, you need to <a href="sign-in" className="text-red-500">Sign in</a> or <a href="register" className="text-red-500">Register</a></p>
             </div>
             <div className="bg-[#F2F2F2] rounded-lg p-6">
                 <h2 className="text-lg font-semibold mb-4">Basic Information</h2>

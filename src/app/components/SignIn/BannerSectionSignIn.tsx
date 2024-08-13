@@ -29,9 +29,9 @@ const BannerSectionCard = () => {
             <CiSearch className="w-10 h-10 text-white bg-[#FF0000] p-2 rounded-sm  hover:shadow-2xl cursor-pointer transition-shadow duration-200" />
           </div>
         </div>
-        <div className=" flex justify-start items-center mt-4 mb-0">
+        <div className=" flex justify-start items-center mt-4">
           <h1 className="text-4xl text-black text-bold font-sans">
-            Frequently Asked Questions
+            Sign In
           </h1>
         </div>
       </div>
