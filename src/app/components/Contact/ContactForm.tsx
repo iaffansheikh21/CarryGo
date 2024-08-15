@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
                                 <input
                                     type="text"
                                     id="name"
-                                    className="border border-gray-300 p-2 shadow-inner rounded-sm"
+                                    className="border border-gray-300 p-2 h-14 shadow-inner rounded-sm"
                                     placeholder="Your Name"
                                     value={name}
                                     onChange={(e) => {
@@ -128,7 +128,7 @@ const ContactForm: React.FC = () => {
                                 <input
                                     type="email"
                                     id="email"
-                                    className="border border-gray-300 p-2 shadow-inner rounded-sm"
+                                    className="border border-gray-300 p-2 h-14 shadow-inner rounded-sm"
                                     placeholder="Your Email"
                                     value={email}
                                     onChange={(e) => {
@@ -144,7 +144,7 @@ const ContactForm: React.FC = () => {
                             <input
                                 type="text"
                                 id="subject"
-                                className="border border-gray-300 p-2 shadow-inner rounded-sm"
+                                className="border border-gray-300 p-2 h-14 shadow-inner rounded-sm"
                                 placeholder="Subject"
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
