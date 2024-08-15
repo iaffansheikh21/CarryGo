@@ -12,6 +12,7 @@ const ContactForm: React.FC = () => {
     const [errors, setErrors] = useState({
         name: '',
         email: '',
+        subject: '',
         message: ''
     });
 
@@ -25,18 +26,23 @@ const ContactForm: React.FC = () => {
 
         let valid = true;
 
-        const newErrors = { name: '', email: '', message: '' };
+        const newErrors = { name: '', email: '', subject:'', message: '' };
 
         if (name.trim() === '') {
             newErrors.name = 'Name is required.';
             valid = false;
         }
+     
 
         if (email.trim() === '') {
             newErrors.email = 'Email is required.';
             valid = false;
         } else if (!validateEmail(email)) {
             newErrors.email = 'Please enter a valid email address.';
+            valid = false;
+        }
+        if (subject.trim() === '') {
+            newErrors.subject = 'Subject is required.';
             valid = false;
         }
 
@@ -54,7 +60,7 @@ const ContactForm: React.FC = () => {
             setEmail('');
             setSubject('');
             setMessage('');
-            setErrors({ name: '', email: '', message: '' });
+            setErrors({ name: '', email: '', subject:'', message: '' });
         } else {
             console.log('Validation failed:', newErrors);
         }
@@ -103,7 +109,7 @@ const ContactForm: React.FC = () => {
                         <h2 className="text-2xl font-semibold ">Contact Form</h2>
                         <div className='flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8'>
                             <div className="flex flex-col space-y-2 w-full md:w-1/2">
-                                <label htmlFor="name" className="text-gray-600">Your Name*</label>
+                                <label htmlFor="name" className="text-gray-600">Your Name <span className='text-red-500'>*</span></label>
                                 <input
                                     type="text"
                                     id="name"
@@ -118,7 +124,7 @@ const ContactForm: React.FC = () => {
                                 {errors.name && <span className="text-red-600 text-sm">{errors.name}</span>}
                             </div>
                             <div className="flex flex-col space-y-2 w-full md:w-1/2">
-                                <label htmlFor="email" className="text-gray-600">Your Email*</label>
+                                <label htmlFor="email" className="text-gray-600">Your Email <span className='text-red-500'>*</span></label>
                                 <input
                                     type="email"
                                     id="email"
@@ -143,9 +149,10 @@ const ContactForm: React.FC = () => {
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
                             />
+                            {errors.subject && <span className="text-red-600 text-sm">{errors.subject}</span>}
                         </div>
                         <div className="flex flex-col space-y-2">
-                            <label htmlFor="message" className="text-gray-600">Your Message*</label>
+                            <label htmlFor="message" className="text-gray-600">Your Message <span className='text-red-500'>*</span></label>
                             <textarea
                                 id="message"
                                 className="border border-gray-300 p-2 rounded-sm shadow-inner h-32 resize-y"
