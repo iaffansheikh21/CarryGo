@@ -9,7 +9,7 @@ const SideSection = () => {
     <>
       <div className="grid grid-cols-1 gap-4 mb-4 w-full">
         <div className="grid grid-cols-1 gap-4">
-        <h1 className="mt-8 mb-2 font-normal text-2xl">Search Ads</h1>
+          <h1 className="mt-8 mb-2 font-normal text-2xl">Search Ads</h1>
           <div>
             <label className="block text-black text-lg mb-2" htmlFor="what">
               What?
@@ -33,15 +33,12 @@ const SideSection = () => {
                 className="w-full border border-gray-300 text-sm p-2 rounded"
               />
               <div className="absolute top-0 right-0 flex items-center justify-center h-full w-10 text-black">
-              <FaMapMarkerAlt />
+                <FaMapMarkerAlt className="text-[#FF0000]" />
               </div>
             </div>
           </div>
           <div>
-            <label
-              className="block text-black text-lg mb-2"
-              htmlFor="category"
-            >
+            <label className="block text-black text-lg mb-2" htmlFor="category">
               Category?
             </label>
             <select
@@ -57,7 +54,7 @@ const SideSection = () => {
           </div>
         </div>
         <div className="flex items-end">
-          <button className="bg-red-600 text-white px-4 py-2 mb-1 hover:shadow-xl hover:transition hover:duration-500 ease-in-out text-sm rounded font-semibold w-full">
+          <button className="bg-[#FF0000] text-white px-4 py-2 mb-1 hover:shadow-xl hover:transition hover:duration-500 ease-in-out text-sm rounded font-semibold w-full">
             Search
           </button>
         </div>
@@ -65,10 +62,13 @@ const SideSection = () => {
 
       <div className="flex items-center justify-start mb-4">
         <button
-          className="text-black hover:text-red-600 font-semibold flex items-center justify-center"
+          className="text-[#FF0000] font-semibold flex items-center justify-center"
           onClick={() => setShowMoreOptions(!showMoreOptions)}
         >
-          <span className="text-lg mr-2 text-red-600">+</span> More Options
+          <span className="text-lg mr-2 text-[#FF0000]">
+            {showMoreOptions ? "-" : "+"}
+          </span>{" "}
+          More Options
         </button>
       </div>
 

@@ -318,7 +318,10 @@ const CardComponent = () => {
               <SortByDropDown />
             </div>
             <div className="hidden lg:mt-10 lg:block">
-              <button onClick={handleLayoutToggle} className="text-lg">
+              <button
+                onClick={handleLayoutToggle}
+                className="text-lg text-white bg-black p-3"
+              >
                 {layout === "vertical" ? <FaListUl /> : <FaThLarge />}
               </button>
             </div>
@@ -348,7 +351,7 @@ const CardComponent = () => {
                       className={`object-cover ${
                         layout === "vertical"
                           ? "w-full h-64"
-                          : "w-full md:w-52 h-52 md:h-full"
+                          : "w-full md:w-52 h-52 lg:h-44 lg:w-64 md:h-full"
                       }`}
                     />
                     {card.offerLabel && (
@@ -368,10 +371,10 @@ const CardComponent = () => {
                     )}
                     {layout === "vertical" && (
                       <>
-                        <div className="absolute top-36 left-3 mt-2 text-lg font-semibold whitespace-nowrap hover:underline text-white cursor-pointer">
+                        <div className="absolute top-40 left-3 pt-2 mt-2 text-lg font-semibold whitespace-nowrap hover:underline text-white cursor-pointer">
                           {card.title}
                         </div>
-                        <div className="absolute top-44 pt-1 left-3 flex items-center text-md font-sans font-bold text-[#878689]">
+                        <div className="absolute top-44 pt-5 left-3 flex items-center text-md font-sans font-bold text-[#878689]">
                           <FaMapMarkerAlt className="mr-1" />
                           <span className="hover:underline cursor-pointer">
                             {card.location}
@@ -380,6 +383,16 @@ const CardComponent = () => {
                         <div className="absolute top-56 left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
                           <div className="pt-1 text-md font-bold text-gray-900">
                             ${card.price}
+                          </div>
+                        </div>
+                        <div className="text-md flex flex-wrap pt-4  text-[#878689]">
+                          <div className="flex  text-sm text-[#878689]">
+                            <SlCalender className="mr-1" />
+                            {card.date}
+                          </div>
+                          <div className="flex items-center text-sm mb-2 ml-3 hover:text-red-600 hover:cursor-pointer">
+                            <FaUserAlt className="mr-1 hover:text-red-500" />
+                            {card.userName}
                           </div>
                         </div>
                       </>
@@ -393,7 +406,7 @@ const CardComponent = () => {
                         <div className="text-lg font-semibold text-black">
                           {card.title}
                         </div>
-                        <div className="text-sm text-gray-900 pl-3">
+                        <div className="text-sm text-gray-900 pl-1">
                           {card.description}
                         </div>
                         <div className="flex items-center text-md hover:underline text-[#878689] mt-1">
@@ -401,14 +414,14 @@ const CardComponent = () => {
                           <span>{card.location}</span>
                         </div>
                       </div>
-                      <div className="md:absolute md:top-28 md:left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
+                      <div className="md:absolute md:top-36 md:left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
                         <div className="pt-1 text-md font-bold text-gray-900">
                           ${card.price}
                         </div>
                       </div>
                       <div className="text-md flex flex-col text-[#878689]">
-                        <div className="flex items-center mb-2">
-                          <FaUserAlt className="mr-1 hover:text-red-500" />
+                        <div className="flex items-center hover:text-red-500 cursor-pointer mb-2">
+                          <FaUserAlt className="mr-1 " />
                           {card.userName}
                         </div>
                         <div className="flex items-center text-sm text-[#878689]">
@@ -445,11 +458,11 @@ const CardComponent = () => {
             ))}
           </div>
         </div>
-        <div className="w-full lg:w-[50%] mt-8 lg:mt-28 lg:mr-64 mx-10 pr-5  pl-5 ">
+        {/* <div className="w-full lg:w-[50%] mt-8 lg:mt-28 lg:mr-64 mx-10 pr-5  pl-5 ">
           <SideSection />
-        </div>
+        </div> */}
       </div>
-      <div className="flex justify-center mt-6 w-full lg:w-11/12 lg:mx-auto">
+      <div className="flex justify-center mt-6 w-full lg:[90%] lg:mx-auto">
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}

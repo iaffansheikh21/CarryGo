@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { FaMapMarkerAlt, FaUserAlt, FaListUl, FaThLarge } from "react-icons/fa"; // Import necessary icons
+import { FaMapMarkerAlt, FaUserAlt, FaListUl, FaThLarge } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import { SlCalender } from "react-icons/sl";
@@ -317,7 +317,10 @@ const CardComponent = () => {
             <SortByDropDown />
           </div>
           <div className="hidden lg:block">
-            <button onClick={handleLayoutToggle} className="text-lg">
+            <button
+              onClick={handleLayoutToggle}
+              className="text-lg bg-black text-white p-3"
+            >
               {layout === "vertical" ? <FaListUl /> : <FaThLarge />}
             </button>
           </div>
@@ -346,7 +349,7 @@ const CardComponent = () => {
                     className={`object-cover ${
                       layout === "vertical"
                         ? "w-full h-64"
-                        : "w-full md:w-52 h-52 md:h-full"
+                        : "w-full md:w-52 h-52 md:h-full lg:h-44 lg:w-56"
                     }`}
                   />
                   {card.offerLabel && (
@@ -355,21 +358,21 @@ const CardComponent = () => {
                     </div>
                   )}
                   {card.featured && (
-                    <div className="absolute top-0 right-0 bg-red-500 text-white text-xs px-2 py-1 cursor-pointer">
+                    <div className="absolute top-0 right-0 bg-[#FF0000] text-white text-xs px-2 py-1 cursor-pointer">
                       FEATURED
                     </div>
                   )}
                   {card.categoryLabel && (
-                    <div className="absolute top-1/2 left-3 mt-3 transform -translate-y-1/2 bg-black font-bold text-white cursor-pointer text-xs px-2 py-1 hover:bg-red-700">
+                    <div className="absolute top-1/2 left-3 mt-5 transform -translate-y-1/2 bg-black font-bold text-white cursor-pointer text-xs px-2 py-1 hover:bg-red-700">
                       {card.categoryLabel}
                     </div>
                   )}
                   {layout === "vertical" && (
                     <>
-                      <div className="absolute top-36 left-3 mt-2 text-lg font-semibold whitespace-nowrap hover:underline text-white cursor-pointer">
+                      <div className="absolute top-28 left-3 mt-2 text-lg font-semibold whitespace-nowrap hover:underline text-white cursor-pointer">
                         {card.title}
                       </div>
-                      <div className="absolute top-44 pt-1 left-3 flex items-center text-md font-sans font-bold text-[#878689]">
+                      <div className="absolute top-44 pt-2 left-3 flex items-center text-md font-sans font-bold text-[#878689]">
                         <FaMapMarkerAlt className="mr-1" />
                         <span className="hover:underline cursor-pointer">
                           {card.location}
@@ -378,6 +381,16 @@ const CardComponent = () => {
                       <div className="absolute top-56 left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
                         <div className="pt-1 text-md font-bold text-gray-900">
                           ${card.price}
+                        </div>
+                      </div>
+                      <div className="text-md flex flex-wrap mt-3  text-[#878689]">
+                        <div className="flex ml-3 items-center text-sm text-[#878689]">
+                          <SlCalender className="mr-1" />
+                          {card.date}
+                        </div>
+                        <div className="flex text-sm ml-3 mt-2 items-center mb-2 hover:text-red-600 hover:cursor-pointer">
+                          <FaUserAlt className="mr-1 mb-1 hover:text-red-500" />
+                          {card.userName}
                         </div>
                       </div>
                     </>
@@ -391,7 +404,7 @@ const CardComponent = () => {
                       <div className="text-lg font-semibold text-black">
                         {card.title}
                       </div>
-                      <div className="text-sm text-gray-900 pl-3">
+                      <div className="text-sm text-gray-900 pl-1">
                         {card.description}
                       </div>
                       <div className="flex items-center text-md hover:underline text-[#878689] mt-1">
@@ -399,14 +412,14 @@ const CardComponent = () => {
                         <span>{card.location}</span>
                       </div>
                     </div>
-                    <div className="md:absolute md:top-28 md:left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
+                    <div className="md:absolute md:top-28 lg:top-36 md:left-3 px-5 py-1 bg-[#F8F8F8] rounded-md">
                       <div className="pt-1 text-md font-bold text-gray-900">
                         ${card.price}
                       </div>
                     </div>
                     <div className="text-md flex flex-col text-[#878689]">
-                      <div className="flex items-center mb-2">
-                        <FaUserAlt className="mr-1 hover:text-red-500" />
+                      <div className="flex items-center hover:text-red-500 cursor-pointer mb-2">
+                        <FaUserAlt className="mr-1 " />
                         {card.userName}
                       </div>
                       <div className="flex items-center text-sm text-[#878689]">

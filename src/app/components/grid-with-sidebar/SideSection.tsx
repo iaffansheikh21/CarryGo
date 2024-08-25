@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const SideSection = () => {
   const [showMoreOptions, setShowMoreOptions] = useState(false);
@@ -16,7 +17,7 @@ const SideSection = () => {
               type="text"
               id="what"
               placeholder="What are you looking for?"
-              className="w-full border border-gray-300 p-2 rounded text-sm"
+              className="w-full border border-gray-300 p-4 rounded text-sm"
             />
           </div>
           <div>
@@ -28,10 +29,10 @@ const SideSection = () => {
                 type="text"
                 id="where"
                 placeholder="Enter Location"
-                className="w-full border border-gray-300 text-sm p-2 rounded pl-10"
+                className="w-full border border-gray-300 text-sm p-4 rounded pl-10"
               />
               <div className="absolute top-0 left-0 flex items-center justify-center h-full w-10 text-red-600">
-                📍
+                <FaMapMarkerAlt size={25} className="text-red-600" />
               </div>
             </div>
           </div>
@@ -44,7 +45,7 @@ const SideSection = () => {
             </label>
             <select
               id="category"
-              className="w-full border text-sm border-gray-300 p-2 rounded"
+              className="w-full border text-sm border-gray-300 p-4 rounded"
             >
               <option>Select Category</option>
               <option>Electronics</option>

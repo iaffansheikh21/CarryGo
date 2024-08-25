@@ -2,9 +2,7 @@ import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import CardComponent from "../grid-with-sidebar/CardComponent";
-import SideSection from "../grid-with-sidebar/SideSection";
-
-import BannerSectionCompact from "./BannerSectionCompact";
+import BannerSectionPricing from "../pricing/BannerSectionPricing";
 
 const MyComponent = () => {
   return (
@@ -12,7 +10,7 @@ const MyComponent = () => {
       {/* <SideSection /> */}
       <Navbar />
 
-      <BannerSectionCompact />
+      <BannerSectionPricing heading="  Listing Grid Compact With Sidebar" />
 
       <div
         className=" h-48 bg-[#F2F2F2]"

@@ -10,24 +10,23 @@ const SortByDropDown = () => {
     <>
       <div className="relative inline-block text-left z-50">
         {/* Label */}
-        <div className="flex justify-center items-center mb-2">
+        <div className="flex justify- items-center  mb-2">
           <label htmlFor="sortBy" className="font-bold text-gray-700">
             Sort by:
           </label>
+          <button
+            type="button"
+            onClick={toggleDropdown}
+            className="flex items-center justify-between w-48 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+          >
+            <span>Default Sorting</span>
+            <FaChevronDown
+              className={`w-3 h-3 ml-2 transform transition-transform duration-200 ${
+                isOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
         </div>
-
-        <button
-          type="button"
-          onClick={toggleDropdown}
-          className="flex items-center justify-between w-48 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
-        >
-          <span>Default Sorting</span>
-          <FaChevronDown
-            className={`w-3 h-3 ml-2 transform transition-transform duration-200 ${
-              isOpen ? "rotate-180" : ""
-            }`}
-          />
-        </button>
 
         {/* Dropdown Menu */}
         {isOpen && (

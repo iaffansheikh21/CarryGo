@@ -185,7 +185,7 @@ const HorizontalCard = () => {
                   <img
                     src={card.imageUrl}
                     alt="Card Image"
-                    className="object-cover w-full md:w-52 h-52 md:h-full sm:h-40"
+                    className="object-cover w-full md:w-52 h-52 md:h-full sm:h-40 lg:w-60 lg:h-44"
                   />
                   {card.offerLabel && (
                     <div className="absolute top-0 left-0 bg-white bg-opacity-75 text-[#524F4E] px-2 py-1 text-sm m-1 mt-1 rounded-md">
@@ -211,22 +211,22 @@ const HorizontalCard = () => {
                     <div className="text-lg font-semibold text-black md:text-md sm:text-sm">
                       {card.title}
                     </div>
-                    <div className="text-sm text-gray-900 lg:pl-3 sm:text-xs">
+                    <div className="text-md text-gray-400 mb-2 mt-2 sm:text-xs">
                       {card.description}
                     </div>
-                    <div className="flex items-center text-md hover:underline text-[#878689] mt-1 sm:text-sm">
+                    <div className="flex items-center cursor-pointer text-md hover:underline text-[#878689] mt-1 sm:text-sm">
                       <FaMapMarkerAlt className="mr-1" />
                       <span>{card.location}</span>
                     </div>
                   </div>
-                  <div className="md:absolute md:top-28 md:left-1 px-5 py-1 bg-[#F8F8F8] rounded-md">
-                    <div className="pt-1 text-md font-bold text-gray-900 sm:text-sm">
+                  <div className="md:absolute md:top-28 lg:top-36 lg:left-3 md:left-1 px-3 py-1 bg-[#F8F8F8] rounded-md">
+                    <div className="pt-1 text-md font-bold text-gray-400 sm:text-sm">
                       ${card.price}
                     </div>
                   </div>
                   <div className="text-md flex flex-col text-[#878689] sm:text-sm">
-                    <div className="flex items-center mb-2">
-                      <FaUserAlt className="mr-1 hover:text-red-500" />
+                    <div className="flex items-center  hover:text-red-500 cursor-pointer mb-2">
+                      <FaUserAlt className="mr-1" />
                       {card.userName}
                     </div>
                     <div className="flex items-center text-sm text-[#878689] sm:text-xs">

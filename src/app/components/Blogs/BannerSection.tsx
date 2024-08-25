@@ -32,9 +32,7 @@ const BannerSectionCard = () => {
           </div>
         </div>
         <div className=" flex justify-start items-center mt-10">
-          <h1 className="text-4xl text-black text-bold font-sans">
-            Blog
-          </h1>
+          <h1 className="text-4xl text-black text-bold font-sans">Blog</h1>
         </div>
       </div>
     </>
