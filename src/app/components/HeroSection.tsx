@@ -227,14 +227,14 @@ export default function Home() {
         }}
       >
         {pathname === "/home3" ? (
-          <div>
+          <div className="mx-8">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.02235668915!2d-0.3817811335630587!3d51.52830805699648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb38a9c5677%3A0x30385f1a9208be0!2sLondon!5e0!3m2!1sen!2suk!4v1688984652379!5m2!1sen!2suk"
               width="100%" // Make iframe width 100%
               height="550" // Adjusted height
               style={{ border: 0 }}
               className="mt-20 "
-              allowFullScreen
+              allowFullScreengit
               loading="lazy"
             ></iframe>
           </div>
