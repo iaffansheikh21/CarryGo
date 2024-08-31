@@ -149,8 +149,15 @@ const Footer = () => {
               </Link>
             </address>
           </div>
+          
         </div>
       </div>
+      <div className="text-sm text-gray-500 mt-0">
+          <p>&copy; 2024 All rights reserved</p>
+        </div>
+        <div className="text-xs text-gray-500 mt-1">
+          <p>Developed by Affan and Bassam</p>
+        </div>
       {/* Background Image */}
       {/* <div className="absolute inset-0 overflow-hidden">
         <Image
