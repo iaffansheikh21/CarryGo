@@ -234,7 +234,7 @@ export default function Home() {
               height="550" // Adjusted height
               style={{ border: 0 }}
               className="mt-20 "
-              allowFullScreengit
+              allowFullScreen
               loading="lazy"
             ></iframe>
           </div>
