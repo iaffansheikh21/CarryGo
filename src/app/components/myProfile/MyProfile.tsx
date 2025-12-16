@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { FaUser, FaHeart, FaStar, FaLock, FaCheck } from "react-icons/fa";
 
 const MyProfile: React.FC = () => {
@@ -135,9 +136,11 @@ const MyProfile: React.FC = () => {
 
         {/* Profile Image and Upload Button */}
         <div className="flex flex-col items-center justify-start space-y-4 ml-4 mb-28">
-          <img
+          <Image
             src="/pic.webp"
             alt="User"
+            width={240}
+            height={240}
             className="w-60 h-60 rounded-full object-cover"
           />
           <button className="py-2 px-4 border border-[#FF0000] text-sm rounded text-[#FF0000]">

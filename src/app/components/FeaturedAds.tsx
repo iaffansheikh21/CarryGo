@@ -133,6 +133,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 
@@ -200,9 +201,11 @@ const FeaturedAds = () => {
               className="bg-[#F2F2F2] shadow-lg cursor-pointer rounded-lg overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl"
             >
               <div className="relative">
-                <img
+                <Image
                   src={card.imageUrl}
                   alt={card.title}
+                  width={400}
+                  height={224}
                   className="w-full h-56 object-cover"
                 />
                 <div className="absolute top-0 left-0 bg-black text-white text-xs font-bold px-2 py-1">

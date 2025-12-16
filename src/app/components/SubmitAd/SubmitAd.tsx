@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
 import { IoIosArrowForward } from "react-icons/io";
@@ -245,9 +246,11 @@ const AdForm = () => {
             <ul className="grid grid-cols-3 gap-2">
               {galleryFiles.map((file, index) => (
                 <li key={index} className="relative">
-                  <img
+                  <Image
                     src={URL.createObjectURL(file)}
                     alt={file.name}
+                    width={200}
+                    height={128}
                     className="w-full h-32 object-cover rounded my-4"
                   />
                   <button

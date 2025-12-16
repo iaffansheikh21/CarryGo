@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Details = () => {
   return (
@@ -68,9 +69,11 @@ const Details = () => {
         <div className="bg-white p-8 rounded-lg shadow-2xl w-full">
           <div className="flex items-center space-x-4">
             {/* Author Image */}
-            <img
+            <Image
               src="https://via.placeholder.com/80"
               alt="Jane Doe"
+              width={96}
+              height={96}
               className="w-24 h-24 rounded-full object-cover"
             />
             <div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 
@@ -153,9 +154,11 @@ const RecentAds = () => {
             >
               <div className="m-2 overflow-hidden">
                 <div className="relative">
-                  <img
+                  <Image
                     src={card.imageUrl}
                     alt="Card Image"
+                    width={400}
+                    height={256}
                     className="w-full h-64 object-cover"
                   />
                   {card.offerLabel && (
@@ -267,37 +270,47 @@ const RecentAds = () => {
 
           <div className="flex flex-wrap justify-center mt-24 space-x-4 md:space-x-14 mb-10">
             <Link href={"/"}>
-              <img
+              <Image
                 src="/partner-1.png"
                 alt="Logo 1"
+                width={100}
+                height={48}
                 className="h-12 mx-2 my-2"
               />
             </Link>
             <Link href={"/"}>
-              <img
+              <Image
                 src="/partner-2.png"
                 alt="Logo 2"
+                width={100}
+                height={48}
                 className="h-12 mx-2 my-2"
               />
             </Link>
             <Link href={"/"}>
-              <img
+              <Image
                 src="/partner-3.png"
                 alt="Logo 3"
+                width={100}
+                height={48}
                 className="h-12 mx-2 my-2"
               />
             </Link>
             <Link href={"/"}>
-              <img
+              <Image
                 src="/partner-4.png"
                 alt="Logo 4"
+                width={100}
+                height={48}
                 className="h-12 mx-2 my-2"
               />
             </Link>
             <Link href={"/"}>
-              <img
+              <Image
                 src="/partner-5.png"
                 alt="Logo 5"
+                width={100}
+                height={48}
                 className="h-12 mx-2 my-2"
               />
             </Link>

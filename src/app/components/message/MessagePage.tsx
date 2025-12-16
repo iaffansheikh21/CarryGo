@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 const peopleDetail = [
   {
@@ -158,10 +159,12 @@ const MessagePage = () => {
             {/* People List Items */}
             {peopleDetail.map((person, index) => (
               <div className="flex items-center px-4 border-b py-2" key={index}>
-                <img
+                <Image
                   className="w-12 h-12 lg:w-16 lg:h-16 rounded-lg object-cover"
                   src={person.profile1}
                   alt={person.name}
+                  width={64}
+                  height={64}
                 />
                 <div className="ml-4 flex-1">
                   <h5 className="text-sm lg:text-lg font-medium mt-2">
@@ -172,10 +175,12 @@ const MessagePage = () => {
                   </p>
                   <small className="text-gray-400">{person.time} ago</small>
                 </div>
-                <img
+                <Image
                   className="w-10 h-10 lg:w-14 lg:h-14 rounded-full mb-4 object-cover"
                   src={person.profile2}
                   alt={person.name}
+                  width={56}
+                  height={56}
                 />
               </div>
             ))}
@@ -187,10 +192,12 @@ const MessagePage = () => {
           <div>
             <div className="p-4 lg:p-6 border-b border-gray-200 flex justify-between items-center">
               <div className="flex items-center">
-                <img
+                <Image
                   className="w-8 h-8 lg:w-10 lg:h-10 rounded-full object-cover"
                   src="/profile.webp"
                   alt="Rosina Warner"
+                  width={40}
+                  height={40}
                 />
                 <h5 className="ml-2 text-sm lg:text-lg font-medium">
                   Rosina Warner
@@ -198,10 +205,12 @@ const MessagePage = () => {
               </div>
               <div className="flex items-center">
                 <h5 className="mr-2 text-sm lg:text-lg font-medium">You</h5>
-                <img
+                <Image
                   className="w-8 h-8 lg:w-10 lg:h-10 rounded-full"
                   src="/profile.webp"
                   alt="You"
+                  width={40}
+                  height={40}
                 />
               </div>
             </div>
@@ -215,10 +224,12 @@ const MessagePage = () => {
                   }`}
                 >
                   {message.type === "received" && (
-                    <img
+                    <Image
                       className="w-8 h-8 lg:w-10 lg:h-10 rounded-full object-cover"
                       src={message.profile}
                       alt={message.sender}
+                      width={40}
+                      height={40}
                     />
                   )}
                   <div
@@ -239,10 +250,12 @@ const MessagePage = () => {
                     </small>
                   </div>
                   {message.type === "sent" && (
-                    <img
+                    <Image
                       className="w-8 h-8 lg:w-10 lg:h-10 object-cover rounded-full"
                       src={message.profile}
                       alt={message.sender}
+                      width={40}
+                      height={40}
                     />
                   )}
                 </div>

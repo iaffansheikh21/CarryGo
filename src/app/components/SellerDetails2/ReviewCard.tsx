@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 
 const ReviewCard = ({
@@ -29,9 +30,11 @@ const ReviewCard = ({
         <p className="text-gray-700 mb-4">{review}</p>
       </div>
       <div className="flex items-center mt-auto">
-        <img
+        <Image
           src="/profile.webp"
           alt={name}
+          width={48}
+          height={48}
           className="w-12 h-12 rounded-full mr-4"
         />
         <span className="text-sm font-semibold">{name}</span>

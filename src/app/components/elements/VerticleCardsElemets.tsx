@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 const cardData = [
@@ -81,9 +82,11 @@ const VerticleCardsElemets = () => {
             >
               <div className="m-2 overflow-hidden">
                 <div className="relative">
-                  <img
+                  <Image
                     src={card.imageUrl}
                     alt="Card Image"
+                    width={400}
+                    height={256}
                     className="w-full h-64 object-cover"
                   />
                   {card.offerLabel && (

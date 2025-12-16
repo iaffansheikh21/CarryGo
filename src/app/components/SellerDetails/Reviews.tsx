@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 
 const reviewsData = [
@@ -71,9 +72,11 @@ const Reviews = () => {
           <div key={review.id} className="mb-10 w-full">
             <div className="flex flex-col sm:flex-row items-start mb-4">
               {/* Image Section */}
-              <img
+              <Image
                 src={review.avatar}
                 alt={review.name}
+                width={80}
+                height={80}
                 className="w-20 h-20 rounded-full mr-6 mb-4 sm:mb-0"
               />
 

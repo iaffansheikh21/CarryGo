@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { SlCalender } from "react-icons/sl";
@@ -76,9 +77,11 @@ const SingleCardComponent = () => {
           >
             <div className="m-2 overflow-hidden">
               <div className="relative">
-                <img
+                <Image
                   src={card.imageUrl}
                   alt="Card Image"
+                  width={400}
+                  height={256}
                   className="object-cover w-full h-64"
                 />
                 {card.offerLabel && (

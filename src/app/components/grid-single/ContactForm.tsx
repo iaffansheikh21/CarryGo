@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const ContactForm: React.FC = () => {
   return (
@@ -13,9 +14,11 @@ const ContactForm: React.FC = () => {
             {/* Author Details */}
             <div className="w-full lg:w-1/2 flex items-start space-x-4 mb-6 lg:mb-0">
               <div className="flex-shrink-0">
-                <img
+                <Image
                   src="https://via.placeholder.com/80"
                   alt="Jane Doe"
+                  width={96}
+                  height={96}
                   className="w-24 h-24 rounded-full object-cover"
                 />
               </div>

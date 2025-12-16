@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "slick-carousel/slick/slick.css";
@@ -91,9 +92,11 @@ const ScrollingImages = () => {
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="h-[750px]">
-            <img
+            <Image
               src={image}
               alt={`Slide ${index}`}
+              width={1200}
+              height={750}
               className="w-[99%] h-full object-cover"
             />
           </div>

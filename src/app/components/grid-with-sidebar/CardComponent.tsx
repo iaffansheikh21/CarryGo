@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaMapMarkerAlt, FaUserAlt, FaListUl, FaThLarge } from "react-icons/fa"; // Import necessary icons
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
@@ -345,9 +346,11 @@ const CardComponent = () => {
               >
                 <div className="m-2 overflow-hidden">
                   <div className="relative">
-                    <img
+                    <Image
                       src={card.imageUrl}
                       alt="Card Image"
+                      width={layout === "vertical" ? 400 : 208}
+                      height={layout === "vertical" ? 256 : 208}
                       className={`object-cover ${
                         layout === "vertical"
                           ? "w-full h-64"
